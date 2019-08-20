@@ -45,4 +45,7 @@ public class WatcherProperties {
 
     @Value("${component:false}")
     private boolean component;
+
+    @Value("${restOperations:false}")
+    private boolean restOperations;
 }

@@ -108,6 +108,7 @@ public class ChaosMonkeyRequestScopeSettingsTest {
         assertThat(settings.getWatcherProperties().isRepository(), is(true));
         assertThat(settings.getWatcherProperties().isService(), is(true));
         assertThat(settings.getWatcherProperties().isRestController(), is(true));
+        assertThat(settings.getWatcherProperties().isRestOperations(), is(true));
         assertThat(settings.getAssaultProperties().isKillApplicationActive(), is(true));
         assertThat(settings.getAssaultProperties().isExceptionsActive(), is(true));
         assertThat(settings.getAssaultProperties().isLatencyActive(), is(true));
@@ -144,6 +145,7 @@ public class ChaosMonkeyRequestScopeSettingsTest {
         watcherProperties.setRepository(true);
         watcherProperties.setRestController(true);
         watcherProperties.setService(true);
+        watcherProperties.setRestOperations(true);
         return watcherProperties;
     }
 

@@ -27,6 +27,9 @@ public class WatcherPropertiesUpdate {
     @Nullable
     private Boolean component;
 
+    @Nullable
+    private Boolean restOperations;
+
     private <T> void applyTo(T value, Consumer<T> setter) {
         if (value != null) setter.accept(value);
     }
@@ -38,5 +41,6 @@ public class WatcherPropertiesUpdate {
         applyTo(service, t::setService);
         applyTo(repository, t::setRepository);
         applyTo(component, t::setComponent);
+        applyTo(restOperations, t::setRestOperations);
     }
 }
